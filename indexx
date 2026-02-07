@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome | Tech Event 2026</title>
+    <style>
+        :root {
+            --bg-color: #050505;
+            --accent-red: #ff0033;
+            --accent-orange: #ff8c00;
+            --text-main: #ffffff;
+            --glass-bg: rgba(15, 15, 15, 0.95);
+        }
+
+        /* --- THE SAME CUSTOM CROSSHAIR CURSOR --- */
+        html, body {
+            cursor: crosshair; 
+            cursor: url('https://cur.cursors-4u.net/games/gam-4/gam382.cur'), crosshair;
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            overflow-x: hidden;
+            min-height: 100vh;
+        }
+
+        /* --- SPIRIT PRESSURE MOUSE GLOW --- */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            background: radial-gradient(circle at var(--x, 50%) var(--y, 50%), rgba(255, 0, 51, 0.15) 0%, transparent 40%);
+            pointer-events: none;
+            z-index: 9999;
+        }
+
+        .wrapper {
+            width: 90%;
+            max-width: 900px;
+            margin: 60px auto;
+            background: var(--glass-bg);
+            border: 1px solid #222;
+            border-top: 5px solid var(--accent-red);
+            box-shadow: 0 0 50px rgba(0, 0, 0, 1);
+            border-radius: 12px;
+            overflow: hidden;
+            position: relative;
+            text-align: center; /* Centered for Home Page feel */
+        }
+
+        nav {
+            padding: 25px;
+            text-align: center;
+            background: rgba(0,0,0,0.5);
+            border-bottom: 1px solid #333;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #888;
+            margin: 0 15px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            transition: 0.3s;
+            font-size: 0.85rem;
+        }
+
+        nav a:hover {
+            color: var(--accent-red);
+            text-shadow: 0 0 10px var(--accent-red);
+        }
+
+        h1 {
+            font-size: 3.5rem;
+            margin: 60px 20px 20px 20px;
+            font-family: 'Impact', sans-serif;
+            background: linear-gradient(to bottom, #fff 20%, var(--accent-red) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .hero-text {
+            font-size: 1.4rem;
+            color: #bbb;
+            margin-bottom: 60px;
+            padding: 0 40px;
+            line-height: 1.6;
+        }
+
+        /* Call to Action Button */
+        .cta-btn {
+            display: inline-block;
+            padding: 15px 40px;
+            margin-bottom: 60px;
+            background: transparent;
+            color: var(--accent-red);
+            border: 2px solid var(--accent-red);
+            text-decoration: none;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            transition: 0.4s;
+            border-radius: 4px;
+        }
+
+        .cta-btn:hover {
+            background: var(--accent-red);
+            color: white;
+            box-shadow: 0 0 20px var(--accent-red);
+            transform: scale(1.05);
+        }
+
+        footer {
+            padding: 50px 20px;
+            text-align: center;
+            background: #000;
+            border-top: 1px solid #222;
+        }
+
+        .copyright-text {
+            color: #555;
+            font-size: 0.9rem;
+            margin-bottom: 15px;
+        }
+
+        .getsuga-mark {
+            display: block;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 2rem;
+            color: var(--accent-red);
+            letter-spacing: 12px;
+            font-weight: bold;
+            text-shadow: 0 0 20px var(--accent-red);
+        }
+
+        /* Mobile Adjustments */
+        @media (max-width: 768px) {
+            h1 { font-size: 2.2rem; }
+            .hero-text { font-size: 1.1rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="wrapper">
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="schedule.html">Schedule</a>
+            <a href="speakers.html">Speakers</a>
+            <a href="register.html">Register</a>
+            <a href="about.html">About</a>
+        </nav>
+
+        <h1>Welcome to Tech Event 2026</h1>
+
+        <p class="hero-text">
+            This is the official website of our tech event. <br>
+            Prepare to witness the ultimate surge of innovation and spiritual pressure.
+        </p>
+
+        <a href="register.html" class="cta-btn">Join the Strike</a>
+
+        <footer>
+            <p class="copyright-text">© 2026 Tech Event. All rights reserved.</p>
+            <span class="getsuga-mark">GETSUGA TENSHOU</span>
+        </footer>
+    </div>
+
+    <script>
+        document.addEventListener('mousemove', e => {
+            document.body.style.setProperty('--x', e.clientX + 'px');
+            document.body.style.setProperty('--y', e.clientY + 'px');
+        });
+    </script>
+
+</body>
+
+</html>
